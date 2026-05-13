@@ -11,5 +11,5 @@ exports.pop = function () {
 };
 
 exports.peek = function () {
-    return stack[0]; // medvetet fel först
+    return _.last(stack);
 };
