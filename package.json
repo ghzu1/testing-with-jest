@@ -12,7 +12,6 @@
   },
   "license": "UNLICENSED",
   "author": "Ghazwan",
-  "type": "commonjs",
   "main": "src/index.js",
   "directories": {
     "test": "tests"
