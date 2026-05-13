@@ -1,0 +1,23 @@
+{
+  "name": "testing-with-jest",
+  "version": "1.0.0",
+  "description": "Inlämningsuppgift 5",
+  "homepage": "https://github.com/ghzu1/testing-with-jest#readme",
+  "bugs": {
+    "url": "https://github.com/ghzu1/testing-with-jest/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghzu1/testing-with-jest.git"
+  },
+  "license": "UNLICENSED",
+  "author": "Ghazwan",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest tests"
+  }
+}
