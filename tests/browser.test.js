@@ -31,3 +31,17 @@ test('After pushing a value, it should be shown on the page', async () => {
     let stackText = await driver.findElement(By.id('top_of_stack')).getText();
     expect(stackText).toEqual("Testvärde");
 });
+test('Clicking peek should show the current top value', async () => {
+    let push = await driver.findElement(By.id('push'));
+    await push.click();
+
+    let alert = await driver.switchTo().alert();
+    await alert.sendKeys("EgetTest");
+    await alert.accept();
+
+    let peek = await driver.findElement(By.id('peek'));
+    await peek.click();
+
+    let stackText = await driver.findElement(By.id('top_of_stack')).getText();
+    expect(stackText).toEqual("EgetTest");
+});
