@@ -13,3 +13,6 @@ exports.pop = function () {
 exports.peek = function () {
     return _.last(stack);
 };
+exports.size = function () {
+    return stack.length;
+};
