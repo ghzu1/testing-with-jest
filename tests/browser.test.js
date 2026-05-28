@@ -45,3 +45,25 @@ test('Clicking peek should show the current top value', async () => {
     let stackText = await driver.findElement(By.id('top_of_stack')).getText();
     expect(stackText).toEqual("EgetTest");
 });
+test('After popping a value, the page should show the previous top value', async () => {
+    let push = await driver.findElement(By.id('push'));
+
+    await push.click();
+    let alert1 = await driver.switchTo().alert();
+    await alert1.sendKeys("Första");
+    await alert1.accept();
+
+    await push.click();
+    let alert2 = await driver.switchTo().alert();
+    await alert2.sendKeys("Andra");
+    await alert2.accept();
+
+    let pop = await driver.findElement(By.id('pop'));
+    await pop.click();
+
+    let popAlert = await driver.switchTo().alert();
+    await popAlert.accept();
+
+    let stackText = await driver.findElement(By.id('top_of_stack')).getText();
+    expect(stackText).toEqual("Första");
+});

@@ -25,3 +25,8 @@ test('pop removes and returns the top element', () => {
     expect(stack.pop()).toBe("andra");
     expect(stack.peek()).toBe("första");
 });
+test('size returns how many items are in the stack', () => {
+    stack.push("storlek-test");
+
+    expect(stack.size()).toBeGreaterThan(0);
+});
